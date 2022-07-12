@@ -1,0 +1,10 @@
+.jfx-tab-pane:top .depth-container .tab-header-area .headers-region .tab-selected-line {
+    -fx-background-color: transparent;
+}
+
+.jfx-tab-pane.tab:selected 
+{
+    -fx-border-width : 0 0 3 0;
+    -fx-border-color:  #F0FFFF;
+}
+

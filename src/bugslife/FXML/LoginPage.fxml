@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bugslife.Controllers.LoginPageController">
+   <children>
+      <ImageView fitHeight="800.0" fitWidth="1200.0">
+         <image>
+            <Image url="@../../resources/images/login_bg.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="350.0" layoutY="75.0" opacity="0.79" prefHeight="650.0" prefWidth="500.0" style="-fx-background-color: #00FF7F;">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="18.0" layoutY="351.0">
+               <image>
+                  <Image url="@../../resources/images/password_icon.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="127.0" layoutY="61.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to &#10;&#9;Bugs Everywhere" wrappingWidth="334.4000732421873">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="28.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Text>
+            <JFXTextField fx:id="usernameF" focusColor="#8875f0" labelFloat="true" layoutX="80.0" layoutY="260.0" prefHeight="40.0" prefWidth="370.0" promptText="Username">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="passwordF" focusColor="#8875f0" labelFloat="true" layoutX="80.0" layoutY="354.0" prefHeight="40.0" prefWidth="370.0" promptText="Password">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXButton buttonType="RAISED" layoutX="152.0" layoutY="550.0" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="200.0" ripplerFill="WHITE" style="-fx-background-color: #8875f0; -fx-font: 30;" text="LOG IN" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="30.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <ImageView fitHeight="80.0" fitWidth="70.0" layoutX="23.0" layoutY="14.0">
+               <image>
+                  <Image url="@../../resources/images/bugsIcon.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="wrongLabel" layoutX="80.0" layoutY="410.0" prefHeight="50.0" prefWidth="370.0" textFill="RED" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="50.0" fitWidth="45.0" layoutX="20.0" layoutY="256.0">
+               <image>
+                  <Image url="@../../resources/images/user_icon.png" />
+               </image>
+            </ImageView>
+            <JFXButton buttonType="RAISED" layoutX="170.0" layoutY="477.0" onAction="#signUpButton" prefHeight="40.0" prefWidth="166.0" ripplerFill="WHITE" style="-fx-background-color: #800000; -fx-font: 30;" text="SIGN UP" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="26.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+         <opaqueInsets>
+            <Insets top="1.0" />
+         </opaqueInsets>
+      </AnchorPane>
+      <AnchorPane layoutX="1150.0" layoutY="10.0" onMouseClicked="#close" prefHeight="23.0" prefWidth="17.0">
+         <children>
+            <ImageView fitHeight="40.0" fitWidth="40.0">
+               <image>
+                  <Image url="@../../resources/images/cross.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </AnchorPane>
+      <AnchorPane fx:id="signUpPane" layoutX="300.0" layoutY="200.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ADFF2F;" visible="false">
+         <children>
+            <Label layoutX="47.0" layoutY="47.0" prefHeight="44.0" prefWidth="234.0" text="Sign Up Now">
+               <font>
+                  <Font name="Berlin Sans FB" size="40.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="35.0" layoutY="234.0">
+               <image>
+                  <Image url="@../../resources/images/password_icon.png" />
+               </image>
+            </ImageView>
+            <JFXTextField fx:id="userSignUp" focusColor="#8875f0" labelFloat="true" layoutX="97.0" layoutY="133.0" prefHeight="40.0" prefWidth="370.0" promptText="Username">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="passwordSignUp" focusColor="#8875f0" labelFloat="true" layoutX="97.0" layoutY="227.0" prefHeight="40.0" prefWidth="370.0" promptText="Password">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </JFXPasswordField>
+            <ImageView fitHeight="50.0" fitWidth="45.0" layoutX="40.0" layoutY="143.0">
+               <image>
+                  <Image url="@../../resources/images/user_icon.png" />
+               </image>
+            </ImageView>
+            <JFXButton buttonType="RAISED" layoutX="403.0" layoutY="322.0" onAction="#registerButton" prefHeight="51.0" prefWidth="159.0" style="-fx-background-color: #8A2BE2;" text="Register" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <AnchorPane layoutX="546.0" layoutY="14.0" onMouseClicked="#closeSignUp" prefHeight="23.0" prefWidth="17.0">
+               <children>
+                  <ImageView fitHeight="40.0" fitWidth="40.0">
+                     <image>
+                        <Image url="@../../resources/images/cross.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </AnchorPane>
+            <Label fx:id="signUpLabel" layoutX="97.0" layoutY="295.0" prefHeight="40.0" prefWidth="278.0" textFill="RED">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #E0FFFF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bugslife.Controllers.IssueUIController">
+   <children>
+      <JFXButton buttonType="RAISED" layoutX="935.0" layoutY="46.0" onAction="#createNewIssue" prefHeight="48.0" prefWidth="159.0" ripplerFill="WHITE" style="-fx-background-color: #7CFC00; -fx-text-fill: #000000;" text="Create New Issue" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView fx:id="table" layoutX="55.0" layoutY="120.0" prefHeight="575.0" prefWidth="1100.0">
+        <columns>
+            <TableColumn fx:id="issueIDF" prefWidth="67.73332214355469" style="-fx-cursor: HAND; -fx-alignment: CENTER-RIGHT;" text="Issue ID" />
+            <TableColumn fx:id="issueTitleF" prefWidth="335.46666717529297" style="-fx-cursor: HAND;" text="Issue Title" />
+          <TableColumn fx:id="statusF" minWidth="0.0" prefWidth="131.73333740234375" style="-fx-cursor: HAND; -fx-alignment: CENTER;" text="Status" />
+          <TableColumn fx:id="tagF" minWidth="0.0" prefWidth="125.86663818359375" style="-fx-cursor: HAND; -fx-alignment: CENTER;" text="Tag" />
+            <TableColumn fx:id="priorityF" prefWidth="74.39990234375" style="-fx-cursor: HAND; -fx-alignment: CENTER;" text="Priority" />
+            <TableColumn fx:id="issueTimeF" prefWidth="140.80010986328125" style="-fx-cursor: HAND; -fx-alignment: CENTER;" text="Date Created" />
+            <TableColumn fx:id="assigneeF" minWidth="0.0" prefWidth="118.13336181640625" style="-fx-cursor: HAND; -fx-alignment: CENTER;" text="Assignee" />
+            <TableColumn fx:id="createdByF" prefWidth="104.2666015625" style="-fx-cursor: HAND; -fx-alignment: CENTER;" text="Created By" />
+        </columns>
+      </TableView>
+      <Text layoutX="110.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Issue Dashboard" wrappingWidth="318.1367416381836">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <AnchorPane layoutX="1149.0" layoutY="14.0" onMouseClicked="#close" prefHeight="23.0" prefWidth="17.0">
+         <children>
+            <ImageView fitHeight="40.0" fitWidth="40.0">
+               <image>
+                  <Image url="@../../resources/images/cross.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </AnchorPane>
+      <ImageView fx:id="backButton" fitHeight="66.0" fitWidth="109.0" onMouseClicked="#backToProjectUI">
+         <image>
+            <Image url="@../../resources/images/backIcon.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <JFXButton fx:id="viewChartButton" buttonType="RAISED" layoutX="68.0" layoutY="725.0" onAction="#openGraphOption" prefHeight="49.0" prefWidth="169.0" style="-fx-background-color: #20B2AA;" text="View Chart Option">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <AnchorPane layoutX="847.0" layoutY="27.0" onMouseClicked="#enterSearchBar" prefHeight="30.0" prefWidth="24.0">
+         <children>
+            <ImageView fx:id="searchButton" fitHeight="49.0" fitWidth="51.0" layoutX="2.0">
+               <image>
+                  <Image url="@../../resources/images/search%20icon.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </AnchorPane>
+      <TextField fx:id="searchBar" layoutX="419.0" layoutY="28.0" prefHeight="50.0" prefWidth="418.0" promptText="Type here and press Enter to search" style="-fx-border-color: #87CEFA; -fx-border-radius: 15; -fx-background-radius: 15;" visible="false">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <Label fx:id="searchLabel" layoutX="425.0" layoutY="83.0" prefHeight="30.0" prefWidth="408.0" textFill="RED">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="graphPrompt" layoutX="400.0" layoutY="275.0" prefHeight="250.0" prefWidth="400.0" style="-fx-background-color: #F5DEB3;" visible="false">
+         <children>
+            <Label layoutX="10.0" layoutY="20.0" prefHeight="38.0" prefWidth="226.0" text="Select Graph Option...">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="firstOption" layoutX="10.0" layoutY="65.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="207.0" text="No. of Issue/Tag">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="options" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="secondOption" layoutX="10.0" layoutY="110.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="186.0" text="No. of Issue/Status" toggleGroup="$options">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="thirdOption" layoutX="10.0" layoutY="150.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="213.0" text="No. of Issue/Month" toggleGroup="$options">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </RadioButton>
+            <Label fx:id="promptLabel" layoutX="20.0" layoutY="200.0" prefHeight="30.0" prefWidth="239.0" text="Please select an option" textFill="RED" visible="false">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="applyButton" layoutX="264.0" layoutY="183.0" onAction="#applyGraphOption" prefHeight="50.0" prefWidth="111.0" style="-fx-background-color: #98FB98;" text="Apply">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

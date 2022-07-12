@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bugslife.Controllers.IssueFreqPerTagPieController">
+   <children>
+      <PieChart fx:id="Issue_Tag" labelLineLength="30.0" layoutX="252.0" layoutY="38.0" legendSide="RIGHT" prefHeight="546.0" prefWidth="764.0" title="Number of Issue/Tag">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></PieChart>
+      <JFXButton fx:id="button" buttonType="RAISED" layoutX="499.0" layoutY="645.0" onAction="#handleButtonAction" prefHeight="89.0" prefWidth="258.0" style="-fx-background-color: #F5DEB3;" text="Load Pie Chart">
+         <font>
+            <Font size="26.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label fx:id="label" alignment="CENTER" contentDisplay="CENTER" layoutX="358.0" layoutY="568.0" prefHeight="62.0" prefWidth="562.0" textAlignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <ImageView fitHeight="66.0" fitWidth="109.0" onMouseClicked="#backToIssueUI">
+         <image>
+            <Image url="@../../resources/images/backIcon.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>
